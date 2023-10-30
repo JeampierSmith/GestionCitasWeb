@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('nombre_medico');
             $table->string('apellido_medico');
             $table->string('email');
-            $table->undsignedBigInteger('especialidad_id');
-            $table->undsignedBigInteger('user_id');
+            $table->unsignedBigInteger('especialidad_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

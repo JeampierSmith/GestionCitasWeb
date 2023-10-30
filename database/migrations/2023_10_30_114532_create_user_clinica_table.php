@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('user_clinica', function (Blueprint $table) {
             $table->id();
-            $table->undsignedBigInteger('user_id');
-            $table->undsignedBigInteger('user_clinica');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_clinica');
             $table->timestamps();
         });
     }
