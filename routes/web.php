@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClinicaController;
+use App\Http\Controllers\MedicoController;
+use App\Http\Controllers\EspecialidadController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermisoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +19,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
+
+Route::resource('/user', UserController::class);
+Route::resource('/clinica', ClinicaController::class);
+Route::resource('/medico', MedicoController::class);
+Route::resource('/especialidad', EspecilidadController::class);
+Route::resource('/role', RoleController::class);
+Route::resource('/user', PermisoController::class);
+
+
+
+
+
